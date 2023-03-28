@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="style.css" >
+   
+  <title> Hospital Website</title>
+</head>
+<style>
+  * {
+    box-sizing: border-box;
+    background-color: #f1bcbc; 
+  }
+  
+ .
+ {
+  width: 100%;
+  height: 100vh;
+  background: #df9f9f;
+  background-size: cover;
+  background-position: center;
+
+ }
+  /* Style inputs */
+  input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+  }
+  input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;
+  }
+ 
+  input[type=submit]:hover {
+    background-color: #45a049;
+  }
+ 
+  /* Style the container/contact section */
+  .container1 {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 10px;
+  }
+ 
+  /* Create two columns that float next to eachother */
+  .column {
+    float: left;
+    width: 50%;
+    margin-top: 6px;
+    padding: 20px;
+  }
+ 
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+ 
+   /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+   @media screen and (max-width: 600px) {
+    .column, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+  }
+  .dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+ 
+  display: inline-block;
+  position: absolute;
+  top: 8px;
+  right: 16px;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+ 
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #de8787}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+  background-color: #8ad78d;
+}
+</style>
+<body>
+   
+<div class="container">
+    <header class="d-flex justify-content-center py-3">
+        <ul class="nav nav-pills">
+          <li class="nav-item"><a href="#" class="nav-link active" aria-current="page">Home</a></li>
+          <li class="nav-item"><a href="#" class="nav-link active">Diagnostics</a></li>
+          <li class="nav-item"><a href="#" class="nav-link active">Specialized Treatment</a></li>
+          <li class="nav-item"><a href="#" class="nav-link active">Emergency Care</a></li>
+          <li class="nav-item"><a href="#" class="nav-link active">About</a></li>
+          
+        </ul>
+      </header>
+     
+<head>
+    <div class="action-cont">
+        <div class="action-block">
+            <!-- <div class="action-btn">
+                <button type="button" id="ebtn_pay" class="button" tabindex="-1">Make Payment</button>
+            </div> -->
+            <div class="action-btn btnanimate1">
+                <button type="button" id="ebtn_a" class="button" tabindex="-1">Book An Appointment</button>
+            </div>
+            <div class="action-btn">
+                <button type="button" id="ebtn_dis" class="button" tabindex="-1">Discounts, Offers &amp; Coupons </button>
+            </div>
+            <div class="action-btn">
+                <button type="button" id="ebtn_v" class="button" tabindex="-1">Get Consultation On Video Call</button>
+            </div>
+        </div>  
+    </div>
+     <div class="action-btn">
+        <button type="button" id="ebtn_vy" class="button" tabindex="-1">Send A Video Tour Of This Service</button>
+    </div>
+    <div class="action-cont">
+          
+          <div class="action-block">
+            <div class="action-btn">
+                <button type="button" id="ebtn_q" class="button" tabindex="-1">Ask A Question</button>
+              </div>
+                          <div class="action-btn">
+                <button type="button" id="ebtn_w" class="button" tabindex="-1">WhatsApp</button>
+              </div>
+                          <div class="action-btn">
+                <a type="button" id="ebtn_c" class="button" tabindex="-1" href="tel:912026834979">Call</a>
+              </div>
+                          <div class="action-btn">
+                <a type="button" id="ebtn_con" class="button" tabindex="-1">Add to Contacts</a>
+              </div> 
+              <div class="action-btn">
+                <a type="button" id="ebtn_d" class="button" tabindex="-1" href="https://maps.google.com/?q=10,11,12 Ashirwad Co-operative Society, Kondhwa Khurd, Pune - 411048, Near Naaz Hotel" rel="nofollow">Get Directions</a>
+              </div>
+            </div>
+          </div>    
+       
+        <!-- The dots/circles -->
+        <div style="text-align:center">
+          <span class="dot" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+  
+    </div>
+    <div class="container col-xxl-8 px-4 py-5">
+        <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+          <div class="col-10 col-sm-8 col-lg-6">
+            <img src="C:\Users\zurun\OneDrive\Desktop\hospital image.jpg"" class="d-block mx-lg-auto img-fluid" alt="hospital" width="700" height="500" loading="lazy">
+          </div>
+          <div class="col-lg-6">
+            <h1 class="display-5 fw-bold lh-1 mb-3">Welfare Multispeciality Hospital</h1>
+            <p class="lead">A hospital is a health care institution providing patient treatment with specialized health science and auxiliary healthcare staff and medical equipment. The best-known type of hospital is the general hospital, which typically has an emergency department to treat urgent health problems ranging from fire and accident victims to a sudden illness. A district hospital typically is the major health care facility in its region, with many beds for intensive care and additional beds for patients who need long-term care. Specialized hospitals include trauma centers, rehabilitation hospitals, children's hospitals, seniors hospitals, and hospitals for dealing with specific medical needs such as psychiatric treatment and certain disease categories. Specialized hospitals can help reduce health care costs compared to general hospitals. Hospitals are classified as general, specialty, or government depending on the sources of income received.
+    
+                A teaching hospital combines assistance to people with teaching to health science students and auxiliary healthcare students. A health science facility smaller than a hospital is generally called a clinic. Hospitals have a range of departments  and specialist units such as cardiology. Some hospitals have outpatient departments and some have chronic treatment units. Common support units include a pharmacy, pathology, and radiology.</p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+              <button type="button" class="btn btn-primary btn-lg px-4 me-md-2">CALL US</button>
+              <button type="button" class="btn btn-outline-secondary btn-lg px-4">ABOUT US</button>
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="container px-4 py-5" id="custom-cards" style="color:black">
+      <h2 class="pb-2 border-bottom">Our Professional Doctors</h2>
+  <p>Book doctor appointment online with Welfare Multispeciality Hospital. Best Gynecologists, Maternity Specialists, Pediatrician, Dermatologists near you.</p>
+      </div>
+          
+          
+   
+    <div class="container1">
+      <div style="text-align:center">
+        <h2>Contact Us</h2>
+        <p>Swing by for a cup of coffee, or leave us a message:</p>
+      </div>
+      <div class="row">
+        <div class="column">
+          <img src="C:\Users\zurun\OneDrive\Desktop\hospital2.jpg" style="width:100%">
+        </div>
+        <div class="column">
+          <form action="/action_page.php">
+            <label for="fname">First Name</label>
+            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+            <label for="lname">Last Name</label>
+            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+            <label for="country">Country</label>
+            <select id="country" name="country">
+              <option value="australia">Australia</option>
+              <option value="canada">Canada</option>
+              <option value="usa">USA</option>
+            </select>
+            <label for="subject">Subject</label>
+            <textarea id="subject" name="subject" placeholder="Write something.."  
+            style="height:170px"></textarea>
+          <input type="submit" value="Submit">
+        </form>
+      </div>
+    </div>
+  </div>
+ 
+</body>
+<footer class="footer section gray-bg">
+    <div class="container">
+        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+          <div class="col-md-4 d-flex align-items-center">
+            <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+             
+            <span class="mb-3 mb-md-0 text-muted">© 2022 Company, Inc</span>
+          </div>
+          <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mr-auto col-sm-6">
+                    <div class="widget mb-5 mb-lg-0">
+                        <div class="logo mb-4">
+                            <img src="images/logo.png" alt="" class="img-fluid">
+                        </div>
+                        <ul class="list-inline footer-socials mt-4">
+                            <li class="list-inline-item"><a href="https://www.facebook.com/Multispecialityhospital1/" class="isor"><i class="icofont-facebook"></i></a></li>
+                            <li class="list-inline-item"><a href="https://www.instagram.com/invites/contact/?i=wmdfeqnhvlrs&amp;utm_content=nhrfwbq" class="isor"><i class="icofont-instagram"></i></a></li>
+                           
+                        </ul>
+                    </div>
+                </div>
+   
+                <div class="col-lg-2 col-md-6 col-sm-6">
+                    <div class="widget mb-5 mb-lg-0">
+                        <h4 class="text-capitalize mb-3">Department</h4>
+                        <div class="divider mb-4"></div>
+   
+                        <ul class="list-unstyled footer-menu lh-35">
+                            <!-- <li><a href="#">Surgery </a></li>
+                            <li><a href="#">Wome's Health</a></li>
+                            <li><a href="#">Radiology</a></li>
+                            <li><a href="#">Cardioc</a></li>
+                            <li><a href="#">Medicine</a></li> -->
+   
+                            <li class="mt-2"><a href="tel:+91-9664089774">+91-9664089774</a></li>
+                            <li class="mt-2"><a href="tel:+91-9699580038">+91-9699580038</a></li>
+                            <li class="mt-2"><a href="tel:+91-9022048184">+91-9022048184</a></li>
+                            <li class="mt-2"><a href="tel:+020 26834979">+020 26834979</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 col-sm-6">
+                    <div class="widget mb-5 mb-lg-0">
+                        <h4 class="text-capitalize mb-3">Address</h4>
+                        <div class="divider mb-4"></div>
+   
+                        <ul class="list-unstyled footer-menu lh-35">
+                            10, 11, 12, &amp; Flat 2, Ashirwad Co-Operative Hsn. Soc., Nr.Naaz Hotel, Behind Bus Stop, Opp.Konark Puram, Kondhwa Khurd, Pune-411048.
+                            <!-- <li><a href="#">Terms & Conditions</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Company Support </a></li>
+                            <li><a href="#">FAQuestions</a></li>
+                            <li><a href="#">Company Licence</a></li> -->
+                        </ul>
+                    </div>
+                </div>
+   
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="widget widget-contact mb-5 mb-lg-0">
+                        <h4 class="text-capitalize mb-3">Get in Touch</h4>
+                        <div class="divider mb-4"></div>
+   
+                        <div class="footer-contact-block mb-4">
+                            <div class="icon d-flex align-items-center">
+                                <i class="icofont-email mr-3"></i>
+                                <span class="h6 mb-0">Support Available for 24/7</span>
+                            </div>
+                            <h4 class="mt-2"><a href="mailto:drsadiquekhan9@email.com">drsadiquekhan9@gmail.com</a></h4>
+                        </div>
+                        <div class="footer-contact-block">
+                            <div class="icon d-flex align-items-center">
+                                <i class="icofont-support mr-3"></i>
+                                <span class="h6 mb-0">All time Support</span>
+                            </div>
+                            <h4 class="mt-2"><a href="tel:+91 951-129-5983">+91 951-129-5983</a></h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+            <!-- <div class="footer-btm py-4 mt-5">
+                <div class="row align-items-center justify-content-between">
+                    <div class="col-lg-6">
+                       
+                    </div>
+                     <div class="col-lg-6">
+                        <div class="subscribe-form text-lg-right mt-5 mt-lg-0">
+                            <form action="#" class="subscribe">
+                                <input type="text" class="form-control" placeholder="Your Email address">
+                                <a href="#" class="btn btn-main-2 btn-round-full">Subscribe</a>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+   
+               
+            </div> -->
+        </div>
+        <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
+            <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
+            <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
+            <li class="ms-3"><a class="text-muted" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
+          </ul>
+        </footer>
+      </div>
+ 
+ 
+</footer>
+<div class="desc-cont">
+    <div class="desc-block">
+<div class="desc-head">Activities on Welfare Multispecialty Hospital's</div>
+<div class="desc-txt">
+<ul>
+<li>On 14 Nov at 08:37 PM - A Customer checked driving direction  to Welfare Multispecialty Hospital</li><li>On 17 Sep at 09:11 PM - A call was made to Welfare Multispecialty Hospital</li>              </ul>
+</div>
+</div>
+                        <div class="desc-block">
+<div class="desc-head">Paediatric Surgeon Doctors in Kondhwa Khurd</div>
+<div class="desc-txt">
+<ul>
+<li><a href="https://www.heyhere.co/dr-aparana-mishra-dr-aparana-mishra-clinic-pune-kondhwa-khurd">Dr. Aparana Mishra (dr. Aparana Mishra Clinic)</a></li><li><a href="https://www.heyhere.co/dr-anupama-sen-clinic-pune-kondhwa-khurd">Dr. Anupama Sen Clinic</a></li>             </ul>
+</div>
+</div>
+<div class="desc-block">
+    <div class="desc-head">Paediatric Surgeon Doctors in Pune</div>
+    <div class="desc-txt">
+    <ul>
+    <li><a href="https://www.heyhere.co/dr-laxmikant-gajeshwar-sindhu-children-nursing-home-pune-kothrud">Dr. Laxmikant Gajeshwar  Sindhu Children Nursing Home</a></li><li><a href="https://www.heyhere.co/k-k-multispeciality-hospital-pune-alandi-devachi">K K Multispeciality Hospital</a></li><li><a href="https://www.heyhere.co/bharti-children-and-cardio-diabetic-hospital-pune-pimple-saudagar">Bharti Children And Cardio Diabetic Hospital</a></li><li><a href="https://www.heyhere.co/dr-wavhal-children-hospital-pune-shikrapur">Dr. Wavhal Children Hospital</a></li><li><a href="https://www.heyhere.co/lifepoint-multispeciality-hospital-pvt-ltd-pune-wakad">Lifepoint Multispeciality Hospital Pvt Ltd</a></li><li><a href="https://www.heyhere.co/siddhi-hospital-laproscopy-centre-pune-dhankawadi">Siddhi Hospital &amp; Laproscopy Centre</a></li><li><a href="https://www.heyhere.co/vinayak-hospital-pune-warje">Vinayak Hospital</a></li><li><a href="https://www.heyhere.co/balaji-hospital-pune-chandan-nagar-kharadi">Balaji Hospital</a></li><li><a href="https://www.heyhere.co/phadke-hospital-pune-shivaji-nagar">Phadke Hospital</a></li><li><a href="https://www.heyhere.co/kataria-hospital-pune-yerawada">Kataria Hospital</a></li>              </ul>
+    </div>
+    </div>
+    </div>           
